@@ -62,7 +62,7 @@
 </head>
 <body class="text-white custom-background">
 
-<nav class="relative px-4 py-4 flex justify-between items-center navbar-custom">
+<nav class="relative px-4 py-4 flex justify-between items-center navbar-custom bg-transparent">
     <a class="text-3xl font-bold leading-none flex items-center" href="{{url('home')}}">
         <img src="{{ asset('images/hazel-logo.png') }}" alt="New Logo" class="h-20">
     </a>
