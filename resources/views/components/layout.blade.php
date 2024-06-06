@@ -13,15 +13,50 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden; /* Prevents horizontal scrolling */
         }
-        /*.custom-background {
+        .custom-background {
             background-image: radial-gradient(circle, rgba(63, 61, 86, 0.5), rgba(10, 0, 17, 0.7));
-        } */
+        }
         .navbar-custom {
             background-color: #000; /* Match this with the background color of home.blade.php */
         }
         .navbar-text {
             color: white; /* Match this with the text color in home.blade.php */
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s forwards; /* Fade in animation */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        h1, h2, p {
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideIn 1s forwards; /* Slide in animation */
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
