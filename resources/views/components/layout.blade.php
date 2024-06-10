@@ -68,6 +68,13 @@
             transform: translateY(-5px); /* Move text up slightly on hover */
             transition: transform 0.3s ease; /* Smooth transition */
         }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
+        .fade-in.visible {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="text-white custom-background">
@@ -85,13 +92,13 @@
         </button>
     </div>
     <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-        <li><a class="text-sm navbar-text hover:text-gray-500 " href="{{url('home')}} ">Home</a></li>
+        <li><a class="text-sm navbar-text hover:text-gray-500 " href="{{url('home')}}">Home</a></li>
         <li class="text-gray-300">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
             </svg>
         </li>
-        <li><a class="text-sm text-blue-600 font-bold" href="{{url('about')}}">About Me</a></li>
+        <li><a class="text-sm text-blue-600 font-bold" href="#about">About Me</a></li>
         <li class="text-gray-300">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
@@ -118,7 +125,7 @@
     {{$content}}
 </main>
 
-<!-- JavaScript for burger menus -->
+<!-- JavaScript for burger menus and smooth scrolling -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Burger menus
@@ -136,8 +143,8 @@
         }
 
         // Close menus
-        const close = document.querySelectorAll('.navbar-close');
-        const backdrop = document.querySelectorAll('.navbar-backdrop');
+        // const close = document.querySelectorAll('.navbar-close');
+        // const backdrop = document.querySelectorAll('.navbar-backdrop');
 
         if (close.length) {
             for (var i = 0; i < close.length; i++) {
@@ -157,6 +164,23 @@
                     }
                 });
             }
+        }
+
+        // Smooth scrolling for internal links
+        const aboutLink = document.querySelector('a[href="#about"]');
+        if (aboutLink) {
+            aboutLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+    });
+
+    // Fade-in effect for the image
+    window.addEventListener('load', function() {
+        const fadeInElement = document.querySelector('.fade-in');
+        if (fadeInElement) {
+            fadeInElement.classList.add('visible');
         }
     });
 </script>
