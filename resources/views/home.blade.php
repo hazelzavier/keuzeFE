@@ -16,7 +16,7 @@
         </div>
 
         <!-- About Me Section -->
-        <section id="about" class="h-screen md:h-screen-75 flex items-center justify-center bg-gray-800 overflow-y-auto">
+        <section id="about" class="min-h-screen md:min-h-screen-75 flex items-center justify-center bg-gray-800 overflow-y-auto pb-20">
             <div class="container mx-auto py-8">
                 <h1 class="text-5xl font-bold text-cyan-500 mb-4">About Me</h1>
                 <div class="text-lg text-gray-300">

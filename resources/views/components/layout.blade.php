@@ -14,7 +14,7 @@
             background-repeat: no-repeat;
             background-position: center;
             font-family: 'Arial', sans-serif;
-            overflow: hidden; /* Prevents horizontal scrolling */
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
         .custom-background {
             background-image: radial-gradient(circle, rgba(63, 61, 86, 0.5), rgba(10, 0, 17, 0.7));
@@ -36,7 +36,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Minimum height to fill the viewport */
             text-align: center;
             opacity: 0;
             animation: fadeIn 2s forwards; /* Fade in animation */
@@ -74,6 +74,12 @@
         }
         .fade-in.visible {
             opacity: 1;
+        }
+        /* Add a scrollbar to the body for smaller screens */
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto;
+            }
         }
     </style>
 </head>
@@ -126,6 +132,7 @@
 </main>
 
 <!-- JavaScript for burger menus and smooth scrolling -->
+<!-- JavaScript for burger menus and smooth scrolling -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Burger menus
@@ -142,42 +149,15 @@
             }
         }
 
-        // Close menus
-        const close = document.querySelectorAll('.navbar-close');
-        const backdrop = document.querySelectorAll('.navbar-backdrop');
-
-        if (close.length) {
-            for (var i = 0; i < close.length; i++) {
-                close[i].addEventListener('click', function() {
-                    for (var j = 0; j < menu.length; j++) {
-                        menu[j].classList.toggle('hidden');
-                    }
-                });
-            }
-        }
-
-        if (backdrop.length) {
-            for (var i = 0; i < backdrop.length; i++) {
-                backdrop[i].addEventListener('click', function() {
-                    for (var j = 0; j < menu.length; j++) {
-                        menu[j].classList.toggle('hidden');
-                    }
-                });
-            }
-        }
-
         // Smooth scrolling for internal links
-        const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-        smoothScrollLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+        const aboutLink = document.querySelector('a[href="#about"]');
+        if (aboutLink) {
+            aboutLink.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
+                const targetSection = document.getElementById('about');
+                targetSection.scrollIntoView({ behavior: 'smooth' });
             });
-        });
+        }
     });
 
     // Fade-in effect for the image
@@ -189,5 +169,7 @@
     });
 </script>
 
+
 </body>
 </html>
+
