@@ -16,11 +16,13 @@
         </div>
 
         <!-- About Me Section -->
-        <section id="about" class="h-screen flex items-center justify-center bg-gray-800">
-            <div class="text-center p-8">
+        <section id="about" class="h-screen md:h-screen-75 flex items-center justify-center bg-gray-800 overflow-y-auto">
+            <div class="container mx-auto py-8">
                 <h1 class="text-5xl font-bold text-cyan-500 mb-4">About Me</h1>
-                <p class="text-lg text-gray-300">I have a passion for developing beautiful and functional websites...</p>
-                <!-- Add more content as needed -->
+                <div class="text-lg text-gray-300">
+                    <p>I have a passion for developing beautiful and functional websites...</p>
+                    <!-- Add more content as needed -->
+                </div>
             </div>
         </section>
     </x-slot>

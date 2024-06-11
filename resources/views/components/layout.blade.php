@@ -143,8 +143,8 @@
         }
 
         // Close menus
-        // const close = document.querySelectorAll('.navbar-close');
-        // const backdrop = document.querySelectorAll('.navbar-backdrop');
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
 
         if (close.length) {
             for (var i = 0; i < close.length; i++) {
@@ -167,13 +167,17 @@
         }
 
         // Smooth scrolling for internal links
-        const aboutLink = document.querySelector('a[href="#about"]');
-        if (aboutLink) {
-            aboutLink.addEventListener('click', function(e) {
+        const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+        smoothScrollLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
-                document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
             });
-        }
+        });
     });
 
     // Fade-in effect for the image
