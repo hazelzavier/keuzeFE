@@ -128,7 +128,7 @@
 </nav>
 
 <main>
-    {{$content}}
+    {{$slot}}
 </main>
 
 <!-- JavaScript for burger menus and smooth scrolling -->

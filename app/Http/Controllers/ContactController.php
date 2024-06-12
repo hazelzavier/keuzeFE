@@ -1,11 +1,3 @@
-namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactMail;
-
-class ContactController extends Controller
-{
 public function submit(Request $request)
 {
 // Validate the form data
@@ -15,10 +7,14 @@ $request->validate([
 'remarks' => 'required|string|max:1000',
 ]);
 
+try {
 // Send the email
 Mail::to('your-email@example.com')->send(new ContactMail($request->all()));
 
 // Redirect with a success message
 return redirect()->route('contact')->with('success', 'Thank you for contacting us! We will get back to you soon.');
+} catch (\Exception $e) {
+// Redirect with an error message if email sending fails
+return redirect()->route('contact')->with('error', 'An error occurred while sending the email. Please try again later.');
 }
 }

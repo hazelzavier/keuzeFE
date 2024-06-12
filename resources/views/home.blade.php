@@ -3,7 +3,6 @@
         Home Page
     </x-slot>
 
-    <x-slot name="content">
         <div id="home-section" class="flex h-screen items-center justify-center">
             <div class="flex-1 text-left p-8">
                 <h1 class="text-5xl font-bold text-cyan-500 mb-4">Welcome to My Portfolio 🌟</h1>
@@ -90,5 +89,4 @@
                 </div>
             </div>
         </section>
-    </x-slot>
 </x-layout>
