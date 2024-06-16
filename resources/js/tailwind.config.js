@@ -13,6 +13,7 @@ module.exports = {
                 },
                 darkpurple: '#4b0082',
                 gold: '#ffd700',
+                customBackground: 'radial-gradient(circle, rgba(63, 61, 86, 0.5), rgba(10, 0, 17, 0.7))',
             },
         },
     },

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="custom-background"> <!-- Apply custom-background class here -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #000;
+            /* Remove background-color property */
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -17,6 +17,7 @@
             overflow-x: hidden; /* Prevents horizontal scrolling */
         }
         .custom-background {
+            /* Keep your radial-gradient background style */
             background-image: radial-gradient(circle, rgba(63, 61, 86, 0.5), rgba(10, 0, 17, 0.7));
         }
         .navbar-custom {
@@ -83,7 +84,7 @@
         }
     </style>
 </head>
-<body class="text-white custom-background">
+<body class="text-white custom-background"> <!-- Apply custom-background class here -->
 
 <nav class="relative px-4 py-4 flex justify-between items-center navbar-custom bg-transparent">
     <a class="text-3xl font-bold leading-none flex items-center" href="{{url('home')}}">
@@ -132,7 +133,6 @@
 </main>
 
 <!-- JavaScript for burger menus and smooth scrolling -->
-<!-- JavaScript for burger menus and smooth scrolling -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Burger menus
@@ -169,7 +169,5 @@
     });
 </script>
 
-
 </body>
 </html>
-
