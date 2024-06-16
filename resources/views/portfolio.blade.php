@@ -1,37 +1,57 @@
+<!-- resources/views/portfolio.blade.php -->
 <x-layout>
-    <x-slot:heading>
-        Home Page
-    </x-slot:heading>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body>
-    <div class="container mx-auto p-4">
-        <h1 class="text-3xl font-bold mb-8 text-center">My Projects</h1>
-        <ul class="grid gap-8">
-            <li class="bg-white dark:bg-zinc-800 shadow-lg rounded-lg overflow-hidden">
-                <div class="p-6">
-                    <h2 class="text-xl font-bold mb-2 text-center">Project 1</h2>
-                    <p class="text-zinc-700 dark:text-zinc-300 text-center">Description of Project 1</p>
-                </div>
-            </li>
-            <li class="bg-white dark:bg-zinc-800 shadow-lg rounded-lg overflow-hidden">
-                <div class="p-6">
-                    <h2 class="text-xl font-bold mb-2 text-center">Project 2</h2>
-                    <p class="text-zinc-700 dark:text-zinc-300 text-center">Description of Project 2</p>
-                </div>
-            </li>
-            <li class="bg-white dark:bg-zinc-800 shadow-lg rounded-lg overflow-hidden">
-                <div class="p-6">
-                    <h2 class="text-xl font-bold mb-2 text-center">Project 3</h2>
-                    <p class="text-zinc-700 dark:text-zinc-300 text-center">Description of Project 3</p>
-                </div>
-            </li>
-        </ul>
-    </div>
-    </body>
-    </html>
+    <x-slot name="heading">
+        Portfolio
+    </x-slot>
+
+    <!-- Meta tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Portfolio | Your Website Name</title>
+    <meta name="description" content="Explore my projects and portfolio. Learn about my skills and expertise in software development.">
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="My Projects - Portfolio | Your Website Name">
+    <meta property="og:description" content="Explore my projects and portfolio. Learn about my skills and expertise in software development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('images/your-image.jpg') }}">
+    <meta property="og:image:alt" content="My Projects - Portfolio">
+
+    <main class="min-h-screen custom-background flex items-center justify-center">
+        <div class="container mx-auto p-4">
+            <h1 class="text-3xl font-bold mb-8 text-center text-white">My Projects</h1>
+            <section class="grid grid-cols-1 gap-8">
+                <article class="bg-white dark:bg-zinc-800 shadow-lg rounded-lg overflow-hidden">
+                    <header class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-center">Mario Game with JavaScript</h2>
+                    </header>
+                    <section class="p-6">
+                        <p class="text-zinc-700 dark:text-zinc-300 text-center">We had to build a game using JavaScript and HTML5. It was a group project with 3 members and involved PHP.</p>
+                    </section>
+                </article>
+                <article class="bg-white dark:bg-zinc-800 shadow-lg rounded-lg overflow-hidden">
+                    <header class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-center">Chirpify - Twitter Clone</h2>
+                    </header>
+                    <section class="p-6">
+                        <p class="text-zinc-700 dark:text-zinc-300 text-center">We received an OOP assignment to recreate Twitter as Chirpify.</p>
+                    </section>
+                </article>
+                <article class="bg-white dark:bg-zinc-800 shadow-lg rounded-lg overflow-hidden">
+                    <header class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-center">Auto Sales Website</h2>
+                    </header>
+                    <section class="p-6">
+                        <p class="text-zinc-700 dark:text-zinc-300 text-center">We built a website focusing on database management, specifically for auto sales.</p>
+                    </section>
+                </article>
+            </section>
+            <!-- Link styled as a button at the end of the page -->
+            <div class="mt-8 text-center">
+                <a href="https://github.com/hazezavier?tab=repositories" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl transition duration-200">
+                    View More Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
 </x-layout>
