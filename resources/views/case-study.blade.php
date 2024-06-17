@@ -1,16 +1,12 @@
-<!-- resources/views/case-study.blade.php -->
 <x-layout>
-    <x-slot name="heading">
-        Case Study Page
-    </x-slot>
 
-    <!-- Meta tags for SEO -->
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study: Creating a 3D Online Changing Room with 3D Avatars</title>
     <meta name="description" content="Read about the development of a 3D online changing room where users can try on clothing using 3D avatars. Includes project overview, challenges faced, solutions implemented, and lessons learned.">
     <meta name="keywords" content="3D online changing room, 3D avatars, virtual fitting room, software development, ConfigWise, Python, project management">
-    <!-- Open Graph meta tags for social sharing -->
     <meta property="og:title" content="Case Study: Creating a 3D Online Changing Room with 3D Avatars">
     <meta property="og:description" content="Read about the development of a 3D online changing room where users can try on clothing using 3D avatars. Includes project overview, challenges faced, solutions implemented, and lessons learned.">
     <meta property="og:type" content="article">

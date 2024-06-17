@@ -6,16 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services Offered - Hazel Davian</title>
     <meta name="description" content="Explore our services including Web Development, UI/UX Design, and SEO Optimization. Contact us to enhance your online presence.">
-    <!-- andere meta tags en links -->
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
+
 <x-layout>
-    <x-slot name="heading">
-        Services
-    </x-slot>
 
     <main class="min-h-screen custom-background">
         <section class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-full">

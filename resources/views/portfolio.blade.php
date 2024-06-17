@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects - Portfolio | Hazel Davian</title>
     <meta name="description" content="Explore my projects and portfolio. Learn about my skills and expertise in software development.">
-    <!-- Open Graph meta tags for social sharing -->
     <meta property="og:title" content="My Projects - Portfolio | Hazel Davian">
     <meta property="og:description" content="Explore my projects and portfolio. Learn about my skills and expertise in software development.">
     <meta property="og:type" content="website">
@@ -14,11 +13,8 @@
     <meta property="og:image" content="{{ asset('images/your-image.jpg') }}">
     <meta property="og:image:alt" content="My Projects - Portfolio">
 
-    <!-- andere meta tags en links -->
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-
-    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -57,7 +53,7 @@
                     </section>
                 </article>
             </section>
-            <!-- Link styled as a button at the end of the page -->
+
             <div class="mt-8 text-center">
                 <a href="https://github.com/hazezavier?tab=repositories" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl transition duration-200 inline-block">
                     View More Projects on GitHub

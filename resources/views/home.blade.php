@@ -5,19 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Portfolio - Hazel Davian</title>
-    <meta name="description" content="I'm Hazel Davian, a passionate Web Developer creating beautiful and functional websites using modern technologies. Learn more about my skills and experience.">
-    <!-- andere meta tags en links -->
+    <meta name="description" content="I'm Hazel Davian, a passionate Student Web Developer creating beautiful and functional websites using modern technologies. Learn more about my skills and experience.">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
 <x-layout>
-    <x-slot name="heading">
-        Home Page
-    </x-slot>
-
-
 
     <header id="home-section" class="grid grid-cols-1 md:grid-cols-2 h-screen items-center justify-center">
         <div class="flex flex-col justify-center items-start p-8">
@@ -30,7 +24,7 @@
         </div>
     </header>
 
-    <!-- About Me Section -->
+
     <section id="about" class="min-h-screen md:min-h-screen-75 flex flex-col items-center justify-center bg-gray-800 overflow-y-auto pb-20">
         <div class="container mx-auto py-8 text-center">
             <h1 class="text-5xl font-bold text-cyan-500 mb-4">About Me</h1>

@@ -1,16 +1,11 @@
-<!-- resources/views/contact.blade.php -->
-<x-layout>
-    <x-slot name="heading">
-        Contact Me
-    </x-slot>
 
-    <!-- Meta tags for SEO -->
+<x-layout>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me | Your Website Name</title>
+    <title>Contact Me</title>
     <meta name="description" content="Contact me for inquiries, questions, or collaborations. Get in touch today!">
-    <!-- Open Graph meta tags for social sharing -->
-    <meta property="og:title" content="Contact Me | Your Website Name">
+    <meta property="og:title" content="Contact Me">
     <meta property="og:description" content="Contact me for inquiries, questions, or collaborations. Get in touch today!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">

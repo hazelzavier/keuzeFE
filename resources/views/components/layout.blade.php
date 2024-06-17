@@ -1,4 +1,3 @@
-<!-- layout.blade.php -->
 <!DOCTYPE html>
 <html lang="en" class="custom-background">
 
@@ -6,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
-    <!-- Include Tailwind CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- SEO Meta Tags -->
+
     <meta name="description" content="@yield('meta_description', 'Insert default description here.')">
     <meta property="og:title" content="@yield('og_title', 'Default OG Title')">
     <meta property="og:description" content="@yield('og_description', 'Insert default OG description here.')">
@@ -203,9 +201,7 @@
         </li>
         <li><a class="text-sm navbar-text hover:text-gray-500" href="{{ url('contact') }}">Contact Me</a></li>
     </ul>
-    <!-- Case Study link for desktop -->
     <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="{{ url('/case-study') }}">Case Study</a>
-    <!-- Case Study link for mobile -->
     <a class="hidden lg:hidden py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200 mobile-case-study" href="{{ url('/case-study') }}">Case Study</a>
 </nav>
 
@@ -216,10 +212,10 @@
 <footer class="text-center py-4 bg-gray-900 text-gray-300">
     &copy; 2024 Hazel Davian. All rights reserved.
 </footer>
-<!-- JavaScript for burger menus and smooth scrolling -->
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Burger menus
+        // Burger navbar ding
         const burger = document.querySelectorAll('.navbar-burger');
         const menu = document.querySelectorAll('.navbar-menu');
 
@@ -233,7 +229,7 @@
             }
         }
 
-        // Smooth scrolling for internal links
+        // Homepage scroll auto naar About Me
         const aboutLink = document.querySelector('a[href="#about"]');
         if (aboutLink) {
             aboutLink.addEventListener('click', function (e) {
@@ -246,7 +242,7 @@
         }
     });
 
-    // Fade-in effect for the image
+    // Fade Image Haze
     window.addEventListener('load', function () {
         const fadeInElement = document.querySelector('.fade-in');
         if (fadeInElement) {
