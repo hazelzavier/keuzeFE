@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Portfolio - Hazel Davian</title>
+    <meta name="description" content="I'm Hazel Davian, a passionate Web Developer creating beautiful and functional websites using modern technologies. Learn more about my skills and experience.">
+    <!-- andere meta tags en links -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
 <x-layout>
     <x-slot name="heading">
         Home Page
@@ -78,7 +92,7 @@
         </div>
     </section>
 
-    <footer class="text-center py-4 bg-gray-900 text-gray-300">
-        &copy; 2024 Hazel Davian. All rights reserved.
-    </footer>
 </x-layout>
+</body>
+
+</html>
