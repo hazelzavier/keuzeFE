@@ -17,9 +17,7 @@
         Home Page
     </x-slot>
 
-    <nav>
-        <!-- Navigatie-elementen kunnen hier worden toegevoegd -->
-    </nav>
+
 
     <header id="home-section" class="grid grid-cols-1 md:grid-cols-2 h-screen items-center justify-center">
         <div class="flex flex-col justify-center items-start p-8">
